@@ -1,0 +1,5 @@
+{:tasks {dev (shell "clojure -M:repl")
+         test (shell "clojure -M:test \"$@\"")
+         start (shell "clojure -M -m grierson.core")
+         docker-build (shell "docker build . -t cheffy:1")
+         docker-run (shell "docker run -p 9000:9000 cheffy:1")}}
